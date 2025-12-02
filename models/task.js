@@ -1,12 +1,11 @@
-// Add new task
-app.post("/tasks", async (req, res) => {
-  const task = await Task.create({
-    title: req.body.title,
-    category: req.body.category || "General",
-    priority: req.body.priority || "low",
-    deadline: req.body.deadline || "",
-    completed: false
-  });
+import mongoose from "mongoose";
 
-  res.json(task);
+const taskSchema = new mongoose.Schema({
+  title: String,
+  category: String,
+  priority: String,
+  deadline: String,
+  completed: { type: Boolean, default: false }
 });
+
+export default mongoose.model("Task", taskSchema);
