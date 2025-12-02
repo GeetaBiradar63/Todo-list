@@ -8,4 +8,5 @@ const taskSchema = new mongoose.Schema({
   completed: { type: Boolean, default: false }
 });
 
-export default mongoose.model("Task", taskSchema);
+// Use named export for Node 24 compatibility
+export const Task = mongoose.model("Task", taskSchema);
