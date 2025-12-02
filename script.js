@@ -1,5 +1,5 @@
 // ====== CONFIG ======
-const API_BASE = "https://my-productivity-app-79up.onrender.com";
+const API_BASE = "https://todo-list-1-0tof.onrender.com";
 const API = `${API_BASE}/tasks`;
 
 const $ = (s) => document.querySelector(s);
@@ -465,3 +465,4 @@ async function init() {
 }
 
 init();
+
