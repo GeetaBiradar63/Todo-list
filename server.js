@@ -2,7 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import { Task } from "./models/task.js";   // ✅ Correct import
+import { Task } from "./models/task.js";
+
 
 dotenv.config();
 
@@ -63,3 +64,4 @@ app.put("/tasks/complete/:id", async (req, res) => {
 app.listen(process.env.PORT || 5000, () =>
   console.log("Server running on port " + (process.env.PORT || 5000))
 );
+
